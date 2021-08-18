@@ -1,0 +1,125 @@
+@import './config';
+@import './responsive';
+
+.container {
+    width: 100%;
+}
+
+.header__image {
+    width: 100%;
+    height: 30vh;
+    background: url(../images/bg-header-mobile.svg);
+    background-color: $DarkGrayishCyan;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main__section {
+    padding: 4rem 1.5rem;
+    background-color: $Background;
+}
+
+.listings {
+    border-radius: 5px;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: white;
+
+    &:hover {
+        border-left: 5px solid $DesaturatedDarkCyan;
+    }
+}
+
+.listings__logo {
+    margin-top: -5rem;
+}
+
+.row__1 {
+    display: flex;
+    margin: 0.5rem 0;
+
+    .company__name {
+        color: $DesaturatedDarkCyan;
+        font-weight: 700;
+        margin-right: 0.5rem;
+        // vertical-align: middle; didnt work so i used padding below
+        padding-top: 0.4rem;
+    }
+
+    .recent {
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        font-weight: 700;
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        color: $FilterTablets;
+        background-color: $DesaturatedDarkCyan;
+        border-radius: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .featured {
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        font-weight: 700;
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        color: $FilterTablets;
+        background-color: $VeryDarkGrayishCyan;
+        border-radius: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.job__title {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: $VeryDarkGrayishCyan;
+}
+
+.row__3 {
+    color: $DarkGrayishCyan;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $DarkGrayishCyan;
+
+    ul {
+        display: flex;
+    }
+
+    li:first-child {
+        list-style-type: none;
+        margin-right: 1rem;
+        padding-right: 0.5rem;
+    }
+
+    li {
+        margin-right: 1rem;
+        padding-right: 0.5rem;
+
+        p {
+            font-size: 0.85rem;
+        }
+    }
+}
+
+.tags {
+    margin-top: 1rem;
+
+    .job__tags {
+        padding: 0.5rem;
+        font-weight: 700;
+        color: $DesaturatedDarkCyan;
+        background-color: $Background;
+        display: inline-block;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        border-radius: 5px;
+    }
+}

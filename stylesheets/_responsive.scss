@@ -1,0 +1,28 @@
+@include media-md {
+
+    .listings {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .listings__logo {
+            margin-top: 0;
+            width: 10%;
+        }
+
+        .listings__details {
+            width: 90%;
+            margin-left: 1.5rem;
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            justify-content: space-between;
+
+            .row__3 {
+                border: none;
+            }
+        }
+    }
+}
