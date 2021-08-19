@@ -66,33 +66,33 @@ function displayJob(job) {
     const tagContainerPosition = document.createElement('p')
     tagContainerPosition.classList.add('job__tags', 'role')
     tagContainerPosition.textContent = `${job.role}`
+    tagContainerPosition.dataset.role = `${job.role}`
     const tagContainerRole = document.createElement('p')
     tagContainerRole.classList.add('job__tags', 'role')
     tagContainerRole.textContent = `${job.level}`
+    tagContainerRole.dataset.level = `${job.level}`
     // append to tagsDiv
     tagsDiv.append(tagContainerPosition, tagContainerRole)
     // Loop through job tools and display all
     if(job.tools.length>0) {
         job.tools.forEach(tool => {
-            const toolContainer = document.createElement('p')
-            toolContainer.classList.add('job__tags', 'tools')
-            toolContainer.textContent = `${tool}`
-            tagsDiv.append(toolContainer)
+            const roleContainer = document.createElement('p')
+            roleContainer.classList.add('job__tags', 'tools')
+            roleContainer.textContent = `${tool}`
+            roleContainer.dataset.tools = tool
+            tagsDiv.append(roleContainer)
         })
     }
     // Loop through job languages and display all
     if(job.languages.length>0) {
-        job.languages.forEach(tool => {
+        job.languages.forEach(language => {
             const toolContainer = document.createElement('p')
             toolContainer.classList.add('job__tags', 'languages')
-            toolContainer.textContent = `${tool}`
+            toolContainer.textContent = `${language}`
+            toolContainer.dataset.language = language
             tagsDiv.append(toolContainer)
         })
     }
-
-
-
-
 
     // append to listing details
     listingDetails.append(innerDiv, tagsDiv)
@@ -112,8 +112,6 @@ function displayJob(job) {
 
 }
 
-
-
 function showJobListings(result) {
     // Loop through result array and manually display results
     result.forEach((job) => {
@@ -132,6 +130,10 @@ const fetchJobListings = async () => {
     } catch (err) {
         console.error(err)
     }
+}
+
+function filterByTags () {
+    
 }
 
 // Fetch job listings on document load

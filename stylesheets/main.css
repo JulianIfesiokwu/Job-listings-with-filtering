@@ -75,10 +75,6 @@
   background-color: white;
 }
 
-.listings:hover {
-  border-left: 5px solid #5ba4a4;
-}
-
 .listings__logo {
   margin-top: -5rem;
 }
@@ -133,6 +129,11 @@
   color: #2c3a3a;
 }
 
+.job__title:hover {
+  color: #5ba4a4;
+  cursor: pointer;
+}
+
 .row__3 {
   color: #7b8e8e;
   padding-bottom: 1rem;
@@ -171,5 +172,11 @@
   margin-bottom: 1rem;
   margin-right: 1rem;
   border-radius: 5px;
+}
+
+.tags .job__tags:hover {
+  cursor: pointer;
+  background-color: #5ba4a4;
+  color: #effafa;
 }
 /*# sourceMappingURL=main.css.map */
