@@ -149,14 +149,12 @@
   list-style-type: none;
   margin-right: 1rem;
   padding-right: 0.5rem;
+  font-size: 0.85rem;
 }
 
 .row__3 li {
   margin-right: 1rem;
   padding-right: 0.5rem;
-}
-
-.row__3 li p {
   font-size: 0.85rem;
 }
 

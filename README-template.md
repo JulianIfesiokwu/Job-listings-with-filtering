@@ -99,6 +99,12 @@ https://www.w3schools.com/cssref/sel_firstchild.asp
 
 https://www.thewebdeveloperguide.com/css-vertical-align-text/
 
+https://www.youtube.com/watch?v=1tVCwv_BX2M
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
+
+https://www.w3schools.com/jsref/met_node_removechild.asp
+
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
