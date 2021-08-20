@@ -20,9 +20,52 @@
     background-color: $Background;
 }
 
+.filter__results {
+    width: 80%;
+    min-height: 30px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 0 2rem 0.5rem 2rem;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    align-items: center;
+    border-radius: 10px;
+
+    .filter__pill {
+        border-radius: 5px;
+        margin: 0.5rem 2rem 0 0;
+
+
+        p {
+            display: inline-block;
+            font-weight: 700;
+            color: $DesaturatedDarkCyan;
+            background-color: #effafa;
+            display: inline-block;
+            padding: 0.5rem;
+            border-radius: 5px 0 0 5px;
+        }
+
+    }
+}
+
+.delete {            
+    background-color: $DesaturatedDarkCyan;
+    border-radius: 0 5px 5px 0;
+    display: inline-block;
+    padding: 0.5rem;
+
+    :hover {
+        cursor: pointer;
+
+    }
+}
+
 .listings {
     border-radius: 5px;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     padding: 2rem;
     background-color: white;
 

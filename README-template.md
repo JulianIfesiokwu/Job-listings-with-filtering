@@ -109,6 +109,10 @@ https://www.w3schools.com/tags/att_data-.asp
 
 https://javascript.plainenglish.io/quick-guide-to-using-data-attributes-f1f2c3161d5f
 
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+
+https://ultimatecourses.com/blog/attaching-event-handlers-to-dynamically-created-javascript-elements
+
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
