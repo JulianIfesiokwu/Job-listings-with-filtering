@@ -1,5 +1,8 @@
 const mainSection = document.querySelector('.main__section')
 const filterResultsContainer = document.querySelector('.filter__results')
+const allJobTags = document.querySelectorAll('.job__tags')
+// Created the global variable so that it is updated everytime it is clicked
+let currentTags = []
 
 function displayJob(job) {
     // Create a single job listing for each job
@@ -70,7 +73,7 @@ function displayJob(job) {
     tagContainerPosition.dataset.role = `${job.role}`
     tagContainerPosition.onclick = addFilter
     const tagContainerRole = document.createElement('p')
-    tagContainerRole.classList.add('job__tags', 'role')
+    tagContainerRole.classList.add('job__tags', 'level')
     tagContainerRole.textContent = `${job.level}`
     tagContainerRole.dataset.level = `${job.level}`
     tagContainerRole.onclick = addFilter
@@ -125,26 +128,47 @@ function showJobListings(result) {
     })
 }
 
-
 function addFilter(e) {
     let filterCriteria = e.target.textContent
-    // Create filter criteria and add to filter results
+    let dataObject = e.target.dataset
+    // Create filter criteria and add to filter results, dont add filter if already present
+    currentTags.push(filterCriteria)
     createFilter(filterCriteria)
+    filterJobs(dataObject)    
 }
 
-function deleteFilter(filterCriteria) {
-    console.log(filterCriteria)
+function deleteFilter(e) {
+    let targetPill = e.target.closest('.filter__pill')
+    targetPill.parentNode.removeChild(targetPill)
+}
+
+function filterJobs(dataObject) {
+    let searchCriteria = Object.values(dataObject).toString()
+    console.log(searchCriteria)
+    // Get array of list tags
+    const jobTagsArray = document.querySelectorAll('.tags')
+    // jobTagsArray.forEach((jobArray) => {
+    //     console.log(jobTagsArray[0].children)
+    // })
+    for(let i=0;i<jobTagsArray.length;i++) {
+        jobTagsArray.forEach((jobArray) => {
+            console.log(jobTagsArray[i].children)
+        })
+        console.log(jobTagsArray[i].children)
+    }
+    console.log(jobTagsArray)
+    
 }
 
 function createFilter(filterCriteria) {
     const filterContainer = document.createElement('div')
-    const filterPill = document.createElement('p')
     filterContainer.classList.add('filter__pill')
+    const filterPill = document.createElement('p')
     filterPill.textContent = filterCriteria
     // create delete filter button
     const deleteBtnContainer = document.createElement('span')
     deleteBtnContainer.classList.add('delete')
-    deleteBtnContainer.onclick = deleteFilter(filterCriteria)
+    deleteBtnContainer.onclick = deleteFilter
     const deleteBtn = document.createElement('img')
     deleteBtn.setAttribute('src', '../images/icon-remove.svg')
     // add deleteBtn to filter Pill
@@ -153,7 +177,6 @@ function createFilter(filterCriteria) {
     // append to dom
     filterResultsContainer.style.display = 'flex'
     filterResultsContainer.append(filterContainer)
-    console.log(filterPill)
 
 }
 
@@ -169,6 +192,6 @@ const fetchJobListings = async () => {
     }
 }
 
-
 // Fetch job listings on document load
 fetchJobListings()
+

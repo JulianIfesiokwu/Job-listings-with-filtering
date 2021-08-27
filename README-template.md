@@ -113,6 +113,20 @@ https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 
 https://ultimatecourses.com/blog/attaching-event-handlers-to-dynamically-created-javascript-elements
 
+https://developer.mozilla.org/en-US/docs/Web/API/Element/remove
+
+https://www.w3schools.com/jsref/met_document_getelementsbytagname.asp
+
+https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName
+
+https://javascript.info/searching-elements-dom
+
+https://www.w3schools.com/jsref/jsref_indexof.asp
+
+https://daily-dev-tips.com/posts/vanilla-javascript-data-attribute-filters/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author

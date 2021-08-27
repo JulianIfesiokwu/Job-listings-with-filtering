@@ -1,11 +1,24 @@
 @include media-md {
 
-    .listings {
+    .main__section {
+
+        .filter__results {
+            width: 80%;
+            margin-bottom: 4rem;
+        }
+    }
+
+    .filter__pill {
+        margin-right: 1rem;
+    }
+
+    .main__section .listings {
         width: 80%;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-bottom: 2rem;
 
         .listings__logo {
             margin-top: 0;
