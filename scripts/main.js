@@ -182,7 +182,7 @@ function createFilter(filterCriteria) {
 
 // Get data from json
 const fetchJobListings = async () => {
-    const source = '../data.json';
+    const source = 'data.json';
     try {
         const response = await fetch(source);
         const result = await response.json();
