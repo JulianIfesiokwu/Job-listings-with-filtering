@@ -170,7 +170,7 @@ function createFilter(filterCriteria) {
     deleteBtnContainer.classList.add('delete')
     deleteBtnContainer.onclick = deleteFilter
     const deleteBtn = document.createElement('img')
-    deleteBtn.setAttribute('src', '../images/icon-remove.svg')
+    deleteBtn.setAttribute('src', './images/icon-remove.svg')
     // add deleteBtn to filter Pill
     deleteBtnContainer.appendChild(deleteBtn)
     filterContainer.append(filterPill,deleteBtnContainer)
